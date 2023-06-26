@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+:root {
+  --cor-principal: #2e1065;
+  --cor-container: #18181b;
+  --cor-button: #1e1b4b;
+  --cor-hover: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #2e1065;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  font-family: 'Poppins', sans-serif;
+  background-color: #18181b;
+  opacity: 0.8;
+  color: white;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 50px;
+  margin-top: 10%;
+}
+
+h2 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input[type="email"],
+input[type="password"] {
+  height: 40px;
+  border-radius: 6px;
+  padding: 0 10px;
+  border: none;
+  background-color: #6b7280;
+  box-shadow: 1px 1px 1px rgba(52, 52, 53, 0.973);
+  color: white;
+}
+
+input::placeholder {
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+button {
+  border-radius: 10px;
+  background-color: #1e1b4b;
+  padding: 10px;
+  font-family: 'Poppins', sans-serif;
+  border: none;
+  cursor: pointer;
+  color: white;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #fdfcff;
+  color: black;
+}
+
+a {
+  color: white;
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#error {
+  color: red;
+  font-size: 15px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin-top: 20%;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  input[type="email"],
+  input[type="password"],
+  button {
+    height: 35px;
+    font-size: 14px;
+  }
+}
