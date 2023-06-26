@@ -7,7 +7,7 @@ const erro = document.querySelector("#error");
 const logins = [
   {
     user: "mateusbrito@gmail.com",
-    pass: "strowt68"
+    pass: "strowt68",
   },
   {
     user: "mariana",
@@ -15,8 +15,8 @@ const logins = [
   },
   {
     user: "admin",
-    pass: "admin"
-  }
+    pass: "admin",
+  },
 ];
 
 btn.addEventListener("click", function (event) {
@@ -27,13 +27,20 @@ btn.addEventListener("click", function (event) {
 function validar() {
   const getEmail = email.value;
   const getPass = senha.value;
+  const verifiedLogin = false;
 
   for (let i in logins) {
     if (getEmail === logins[i].user && getPass === logins[i].pass) {
-       return location.href = 'home.html'
+      return (location.href = "./assets/home/home.html");
+      verifiedLogin = true;
+      break;
     } else {
-        erro.innerHTML = 'Usúario ou senha incorretos.'
-        break;
     }
+  }
+
+  if (verifiedLogin === true) {
+    alert("ok");
+  } else {
+    erro.innerHTML = "Usúario ou senha incorretos.";
   }
 }
